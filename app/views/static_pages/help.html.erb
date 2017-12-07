@@ -1,2 +1,32 @@
-<h1>StaticPages#help</h1>
-<p>Find me in app/views/static_pages/help.html.erb</p>
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title><%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title>
+
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<h1>じこしょうかい</h1>
+	<P> はじめまして。  </P>
+	<p> Nguyen Thao Ly ともします。今年、２１歳です。大学四年制です。ハノイにすんでいます。やすみのひ、わたしはりょりをはまっています。</p>
+	<p>私の facebook は<a href="https://www.facebook.com/zenlili2412" target="blank">nguyen thao ly</a>です。</p>
+
+	<p>どうぞよろしくおねがいしました。</p>
+
+</body>
+</html> -->
+
+<% provide(:title, "Help") %>
+  <h1>Help</h1>
+  <P> はじめまして。  </P>
+  <p> Nguyen Thao Ly ともします。今年、２１歳です。大学四年制です。ハノイにすんでいます。やすみのひ、わたしはりょりをはまっています。</p>
+  <p>私の facebook は<a href="https://www.facebook.com/zenlili2412" target="blank">nguyen thao ly</a>です。</p>
+
+  <p>どうぞよろしくおねがいしました。</p>
+
+  <button><a href="home" >HOME</a></button>
+  <button><a href="about" title="">ABOUT</a></button>
+  <button><a href="contact" title="">CONTACT</a></button>
