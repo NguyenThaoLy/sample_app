@@ -63,3 +63,18 @@ en:
   controllers:
     users_controller:
       welcome: "Wellcome #{@user.name} to the our website"
+    edit:
+      edit: "Edit user"
+      title: "Update your profile"
+      save: "Save changes"
+      change: "change"
+    index:
+      title: "All users"
+    user:
+      sure: "You sure?"
+  controllers:
+    users_controller:
+      welcome: "Wellcome #{@user.name} to the our website"
+      updated: "Profile updated"
+      login: "Please log in"
+      deleted: "User deleted"
