@@ -1,7 +1,5 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
-
-/* mixins, variables, etc. */
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
 
 $gray-medium-light: #eaeaea;
 $gray-light: #777;
@@ -41,8 +39,6 @@ textarea {
   }
 }
 
-
-/* typography */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
@@ -63,11 +59,9 @@ h2 {
 }
 
 p {
-    font-size: 1.1em;
-    line-height: 1.7em;
+  font-size: 1.1em;
+  line-height: 1.7em;
 }
-
-/* header */
 
 #logo {
   color: $orange;
@@ -109,7 +103,6 @@ footer {
     }
 }
 
-/* content */
 .img-logo img{
 width : 200px;
 }
@@ -124,16 +117,16 @@ aside {
     margin-top: 20px;
   }
   section {
-    padding: 10px 0;
     margin-top: 20px;
+    padding: 10px 0;
     &:first-child {
       border: 0;
       padding-top: 0;
     }
     span {
       display: block;
-      margin-bottom: 3px;
       line-height: 1;
+      margin-bottom: 3px;
     }
     h1 {
       font-size: 1.4em;
@@ -167,8 +160,8 @@ input {
 }
 
 .new_user{
-  border-radius: 5px;
   background-color: $background-user;
+  border-radius: 5px;
   padding: 20px;
   label{
     font-size:16px;
@@ -191,10 +184,9 @@ input {
 }
 
 .login{
-  border-radius: 5px;
   background-color: $background-user;
+  border-radius: 5px;
   padding: 20px;
-
   p{
     padding-top: 20px;
     text-align: center;

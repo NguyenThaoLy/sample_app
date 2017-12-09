@@ -5,5 +5,5 @@ users:
     maximum: 255
   password:
     minimum: 6
-UsersHelper:
+usershelper:
   size: 80
