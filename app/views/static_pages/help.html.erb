@@ -1,10 +1,9 @@
-<% provide(:title, t(".help")) %>
+<% provide :title, t(".help") %>
   <h1><%= t(".help") %></h1>
   <P> はじめまして。  </P>
   <p> Nguyen Thao Ly ともします。今年、２１歳です。大学四年制です。ハノイにすんでいます。やすみのひ、わたしはりょりをはまっています。</p>
   <p>私の facebook は<a href="https://www.facebook.com/zenlili2412" target="blank">nguyen thao ly</a>です。</p>
-
   <p>どうぞよろしくおねがいしました。</p>
-  <%= link_to t(".home"), root_path, class: "btn btn-default" %>
+<%= link_to t(".home"), root_path, class: "btn btn-default" %>
 <%= link_to t(".about"), help_path, class: "btn btn-default" %>
 <%= link_to t(".contact"), contact_path, class: "btn btn-default" %>

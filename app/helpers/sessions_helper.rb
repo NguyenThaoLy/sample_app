@@ -1,4 +1,5 @@
 module SessionsHelper
+<<<<<<< decac8b2109d904adde1ac30953b5eb0cd03653c
   def log_in user
     session[:user_id] = user.id
   end
@@ -10,5 +11,4 @@ module SessionsHelper
   def logged_in?
     current_user.present?
   end
-
 end

@@ -62,4 +62,3 @@ en:
   controllers:
     users_controller:
       welcome: "Wellcome #{@user.name} to the our website"
-
