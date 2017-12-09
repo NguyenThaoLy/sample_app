@@ -1,12 +1,12 @@
 <footer class="footer">
   <small>
-    The website made by <a href="https://www.facebook.com/zenlili2412" >Nguyen Thao Ly</a> @2017.Frangia.inc
+     <%= t(".made") %> <%= link_to t(".name"), "https://www.facebook.com/zenlili2412" %> <%= t(".framgia") %>
   </small>
   <nav>
     <ul>
-      <li><%= link_to "About", about_path %></li>
-      <li><%= link_to "Contact", contact_path %></li>
-      <li><a href="http://news.railstutorial.org/">News</a></li>
+      <li><%= link_to t(".about"), about_path %></li>
+      <li><%= link_to t(".contact"), contact_path %></li>
+      <li><%= link_to t(".news"), 'http://news.railstutorial.org/'%></li>
     </ul>
   </nav>
 </footer>
