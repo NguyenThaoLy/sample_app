@@ -1,10 +1,10 @@
-class UsersController < ApplicationControlle
+class UsersController < ApplicationController
   before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
   before_action :correct_user, only: [:edit, :update]
   before_action :admin_user, only: :destroy
-  def show
-    @user = User.find_by params[:id]
-  end
+  before_action :find_user, only: [:show, :update,  ]
+
+  def show; end
 
   def new
     @user= User.new
@@ -13,9 +13,9 @@ class UsersController < ApplicationControlle
   def create
     @user = User.new user_params
     if @user.save
-      log_in @user
-      flash[:success] = t(".welcome")
-      redirect_to @user
+      @user.send_activation_email
+      flash[:info] = t("controllers.users_controller.info")
+      redirect_to root_url
     else
       render :new
     end
@@ -25,18 +25,11 @@ class UsersController < ApplicationControlle
     @users = User.paginate(page: params[:page], per_page: 5)
   end
 
-  def show
-    @user = User.find_by params[:id]
-  end
-
-  def edit
-    @user = User.find_by params[:id]
-  end
+  def edit; end
 
   def update
-    @user = User.find_by params[:id]
     if @user.update_attributes(user_params)
-      flash[:success] = t(".updated")
+      flash[:success] = t("controllers.users_controller.updated")
       redirect_to @user
     else
       render :edit
@@ -44,8 +37,8 @@ class UsersController < ApplicationControlle
   end
 
   def destroy
-    User.find_by params[:id].destroy
-    flash[:success] = t(".deleted")
+    @user.destroy
+    flash[:success] = t("controllers.users_controller.deleted")
     redirect_to users_url
   end
 
@@ -59,17 +52,23 @@ class UsersController < ApplicationControlle
   def logged_in_user
     unless logged_in?
       store_location
-      flash[:danger] = t(".login")
+      flash[:danger] = t("controllers.users_controller.login")
       redirect_to login_url
     end
   end
 
   def correct_user
-    @user = User.find_by params[:id]
+    @user = User.find_by id: params[:id]
     redirect_to(root_url) unless current_user?(@user)
   end
 
   def admin_user
     redirect_to(root_url) unless current_user.admin?
+  end
+
+  def find_user
+    @user = User.find_by id: params[:id]
+    return if @user
+    redirect_to root_path
   end
 end

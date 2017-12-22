@@ -60,9 +60,6 @@ en:
     new:
       signup: "Sign up"
       submit: "Create my account"
-  controllers:
-    users_controller:
-      welcome: "Wellcome #{@user.name} to the our website"
     edit:
       edit: "Edit user"
       title: "Update your profile"
@@ -72,9 +69,20 @@ en:
       title: "All users"
     user:
       sure: "You sure?"
+  user_mailer:
+    account_activation:
+      title: "Sample App"
+      content: "Welcome to the Sample App! Click on the link below to activate your account:"
   controllers:
     users_controller:
       welcome: "Wellcome #{@user.name} to the our website"
+      info: "Please check your email to activate your account."
       updated: "Profile updated"
       login: "Please log in"
       deleted: "User deleted"
+    account_activations_controller:
+      success: "Account activated!"
+      danger: "Invalid activation link"
+    sessions_controller:
+      message: "Account not activated. "
+      message2: "Check your email for the activation link."
