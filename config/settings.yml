@@ -7,3 +7,5 @@ users:
     minimum: 6
 usershelper:
   size: 80
+index:
+  size: 50
